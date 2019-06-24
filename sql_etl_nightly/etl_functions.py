@@ -9,8 +9,8 @@ Created on Mon Jun 24 11:19:56 2019
 
 #%% Package Imports
 
-import pandas as pd
 import datetime
+import pandas as pd
 from sqlalchemy import create_engine
 
 
@@ -44,7 +44,8 @@ def connect_sql_server(server_name, db_name):
                             + server_name
                             + '/'
                             + db_name
-                            + '?driver=ODBC+Driver+13+for+SQL+Server')
+                            + '?driver=ODBC+Driver+13+for+SQL+Server',
+                            fast_executemany=True)
 
     return sql_con
 
