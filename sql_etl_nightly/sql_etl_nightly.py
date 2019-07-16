@@ -34,7 +34,7 @@ def sql_etl():
                                          df_row[1]['EXPORT_DB_NAME'])
 
         df_out.to_sql(df_row[1]['EXPORT_TABLE_NAME'], sql_con_out,
-                      schema=df_row[1]['EXPORT_SCHEMA_NAME'], if_exists='replace')
+                      schema=df_row[1]['EXPORT_SCHEMA_NAME'], if_exists='replace', chunksize=1000)
 
 if __name__ == "__main__":
     sql_etl()
