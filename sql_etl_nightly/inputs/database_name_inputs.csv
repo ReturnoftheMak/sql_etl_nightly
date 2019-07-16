@@ -1,5 +1,9 @@
 IMPORT_SERVER_NAME,IMPORT_DB_NAME,IMPORT_TABLE_NAME,EXPORT_SERVER_NAME,EXPORT_DB_NAME,EXPORT_TABLE_NAME,EXPORT_SCHEMA_NAME
-tcspmSMDB02,USDF,CS,tcspmSMDB01,Property,CS,propr
-tcspmSMDB02,USDF,PremSum,tcspmSMDB01,Property,PremSum,propr
-tcspmSMDB02,USDF,PremSum2,tcspmSMDB01,Property,PremSum2,propr
-tcspmSMDB02,USDF,PolicyList,tcspmSMDB01,Property,PolicyList,propr
+tcspmSMDB02,USDF,SELECT * from propr.CS,tcspmSMDB01,Property,CS,propr
+tcspmSMDB02,USDF,SELECT * from  propr.PremSum,tcspmSMDB01,Property,PremSum,propr
+tcspmSMDB02,USDF,SELECT * from  propr.PremSum2,tcspmSMDB01,Property,PremSum2,propr
+tcspmSMDB02,USDF,SELECT * from  propr.PolicyList,tcspmSMDB01,Property,PolicyList,propr
+tcspmSMDB02,USDF,SELECT * from  propr.RC,tcspmSMDB01,Property,RC,propr
+tcspmdwh06\live,Warehouse_Repository,SELECT * from  actuarial.pricing,tcspmSMDB01,PricingModels_Live,Pricing,actuarial
+tcspmdwh06\live,Warehouse_Repository,SELECT * FROM actuarial.PolicyRiskCountryLimits,tcspmSMDB01,PricingModels_Live,PolicyRiskCountryLimits,actuarial
+tcspmdwh06\live,Warehouse_Repository,SELECT * FROM actuarial.ExchangeRates,tcspmSMDB01,PricingModels_Live,ExchangeRates,actuarial
