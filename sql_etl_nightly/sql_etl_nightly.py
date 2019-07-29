@@ -11,6 +11,7 @@ Created on Mon Jun 24 12:11:00 2019
 
 import pandas as pd
 from etl_functions import retrieve_inputs, connect_sql_server, table_manipulation
+from sectionref_riskcodes.sectionref_riskcodes.main import section_riskcodes
 
 
 #%% Definition and execution of main function
@@ -38,3 +39,4 @@ def sql_etl():
 
 if __name__ == "__main__":
     sql_etl()
+    section_riskcodes()
